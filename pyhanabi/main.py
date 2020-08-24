@@ -21,11 +21,14 @@ import rela
 from eval import evaluate
 import utils
 
-
 def parse_args():
     parser = argparse.ArgumentParser(description="train dqn on hanabi")
     parser.add_argument("--save_dir", type=str, default="exps/exp1")
     parser.add_argument("--method", type=str, default="vdn")
+
+    """Added arguments"""
+    parser.add_argument("--load_index", type=int, default=None)
+    parser.add_argument("--other_play", type=bool, default=False)
 
     # game settings
     parser.add_argument("--seed", type=int, default=10001)
@@ -116,6 +119,13 @@ if __name__ == "__main__":
             game_info["num_action"],
         )
         agent_cls = iql_r2d2.R2D2Agent
+
+    # Load agent with index
+    if args.load_index:
+        weight_file_name = "model" + str(args.load_index) + ".pthw"
+        path = os.path.join(args.save_dir, weight_file_name)
+        print("Getting weights from {}".format(path))
+        saver.load_weights(agent, path)
 
     # eval is always in IQL fashion
     eval_agents = []
@@ -231,16 +241,17 @@ if __name__ == "__main__":
 
             batch, weight = replay_buffer.sample(args.batchsize, args.train_device)
             weight = weight.to(args.train_device).detach()
-            loss, priority = agent.loss(batch)
+
+            loss, priority = agent.loss(batch, args)
             loss = (loss * weight).mean()
             loss.backward()
+
             g_norm = torch.nn.utils.clip_grad_norm_(
                 agent.online_net.parameters(), args.grad_clip
             )
             optim.step()
             optim.zero_grad()
             replay_buffer.update_priority(priority)
-
             stat["loss"].feed(loss.detach().item())
             stat["grad_norm"].feed(g_norm)
 

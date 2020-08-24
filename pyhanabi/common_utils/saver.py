@@ -29,6 +29,7 @@ class TopkSaver:
         model_name = "model%i.pthm" % self.worse_perf_idx
         weight_name = "model%i.pthw" % self.worse_perf_idx
         if model is not None:
+            print("model saved to {}".format(model_name))
             model.save(os.path.join(self.save_dir, model_name))
         if state_dict is not None:
             torch.save(state_dict, os.path.join(self.save_dir, weight_name))
@@ -49,3 +50,9 @@ class TopkSaver:
         self.worse_perf = worse_perf
         self.worse_perf_idx = worse_perf_idx
         return True
+
+    def load_weights(self, model, path):
+        pretrained_dict = torch.load(path)
+        model.online_net.load_state_dict(pretrained_dict)
+        model.sync_target_with_online()
+        print("Loaded model")
