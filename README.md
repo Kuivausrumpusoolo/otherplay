@@ -66,7 +66,7 @@ make -j10
 ## Run
 
 `pyhanabi` contains an example script `op.sh` to launch training an agent. 
-Other-play training is triggered by setting the flag ´--other_play True`.
+Other-play training is triggered by setting the flag `--other_play True`.
 ```bash
 cd pyhanabi
 sbatch op.sh
