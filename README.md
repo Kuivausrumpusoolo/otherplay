@@ -54,9 +54,8 @@ conda install -c conda-forge cmake
 Clone & build.
 ```bash
 cd /scratch/<project_id> 
-git clone --recursive https://github.com/facebookresearch/hanabi.git
-# replace with this repository for otherplay
-cd hanabi
+git clone --recursive https://version.aalto.fi/gitlab/peltons10/otherplay.git
+cd otherplay
 mkdir build
 cd build
 cmake ..
