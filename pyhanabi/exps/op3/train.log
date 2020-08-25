@@ -1,0 +1,1211 @@
+{'act_base_eps': 0.1,
+ 'act_device': 'cpu',
+ 'act_eps_alpha': 7.0,
+ 'actor_sync_freq': 10,
+ 'batchsize': 64,
+ 'burn_in_frames': 10000,
+ 'epoch_len': 500,
+ 'eps': 1.5e-05,
+ 'eval_bomb': 0,
+ 'gamma': 0.999,
+ 'grad_clip': 5.0,
+ 'greedy_extra': 1,
+ 'load_index': None,
+ 'lr': 0.0003,
+ 'max_len': 80,
+ 'method': 'vdn',
+ 'multi_step': 3,
+ 'num_epoch': 5000,
+ 'num_game_per_thread': 40,
+ 'num_player': 2,
+ 'num_thread': 80,
+ 'num_update_between_sync': 2500,
+ 'other_play': True,
+ 'prefetch': 3,
+ 'priority_exponent': 0.9,
+ 'priority_weight': 0.6,
+ 'replay_buffer_size': 80072,
+ 'rnn_hid_dim': 512,
+ 'save_dir': 'exps/op3',
+ 'seed': 3,
+ 'train_bomb': 0,
+ 'train_device': 'cuda:0'}
+R2D2Agent(
+  original_name=R2D2Agent
+  (online_net): R2D2Net(
+    original_name=R2D2Net
+    (net): _ConstSequential(
+      original_name=_ConstSequential
+      (0): ScriptModule(original_name=Linear)
+      (1): ScriptModule(original_name=ReLU)
+    )
+    (lstm): ScriptModule(original_name=LSTM)
+    (fc_v): ScriptModule(original_name=Linear)
+    (fc_a): ScriptModule(original_name=Linear)
+  )
+  (target_net): R2D2Net(
+    original_name=R2D2Net
+    (net): _ConstSequential(
+      original_name=_ConstSequential
+      (0): ScriptModule(original_name=Linear)
+      (1): ScriptModule(original_name=ReLU)
+    )
+    (lstm): ScriptModule(original_name=LSTM)
+    (fc_v): ScriptModule(original_name=Linear)
+    (fc_a): ScriptModule(original_name=Linear)
+  )
+)
+actor eps [0.1, 0.08154407395185162, 0.06649435996665046, 0.05422221006501587, 0.04421499907374487, 0.03605471154250502, 0.02940048064334708, 0.023974349678010775, 0.019549661430912607, 0.01594159037455999, 0.012999422244132457, 0.010600258488068826, 0.008643882620598262, 0.007048574036451904, 0.005747694424835353, 0.004686904192314193, 0.0038218926206331195, 0.003116526944929431, 0.0025413430367026368, 0.0020723146452190297, 0.0016898497868124572, 0.0013779723598335584, 0.0011236548001387517, 0.0009162739011886733, 0.0007471670675868075, 0.0006092704661368676, 0.0004968239594734388, 0.0004051304969235383, 0.00033035991201283403, 0.0002693889309590173, 0.00021967070907932357, 0.00017912844546220044, 0.00014606863203649891, 0.0001191103133283007, 9.712740198471169e-05, 7.920164050192559e-05, 6.45842443019698e-05, 5.266462393484282e-05, 4.294487988789273e-05, 3.5019004614317064e-05, 2.8555923019901068e-05, 2.3285662984981972e-05, 1.8988078244652658e-05, 1.5483652565854994e-05, 1.2626001098748582e-05, 1.029575567312513e-05, 8.395578619995106e-06, 6.8460968385746595e-06, 5.582586268862691e-06, 4.552268275507311e-06, 3.712105009066358e-06, 3.0270016537634625e-06, 2.4683404670686517e-06, 2.012785375849939e-06, 1.6413071953751306e-06, 1.3383887531737569e-06, 1.0913767146512742e-06, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+training with bomb: 0
+Finished creating environments with 3200 games and 80 actors
+warming up replay buffer: 0
+warming up replay buffer: 0
+warming up replay buffer: 0
+warming up replay buffer: 0
+warming up replay buffer: 1
+warming up replay buffer: 1
+warming up replay buffer: 1
+warming up replay buffer: 1
+warming up replay buffer: 2
+warming up replay buffer: 2
+warming up replay buffer: 2
+warming up replay buffer: 2
+warming up replay buffer: 2
+warming up replay buffer: 3
+warming up replay buffer: 7
+warming up replay buffer: 7
+warming up replay buffer: 7
+warming up replay buffer: 7
+warming up replay buffer: 8
+warming up replay buffer: 8
+warming up replay buffer: 9
+warming up replay buffer: 9
+warming up replay buffer: 11
+warming up replay buffer: 12
+warming up replay buffer: 13
+warming up replay buffer: 13
+warming up replay buffer: 14
+warming up replay buffer: 14
+warming up replay buffer: 15
+warming up replay buffer: 18
+warming up replay buffer: 19
+warming up replay buffer: 19
+warming up replay buffer: 19
+warming up replay buffer: 20
+warming up replay buffer: 20
+warming up replay buffer: 21
+warming up replay buffer: 24
+warming up replay buffer: 25
+warming up replay buffer: 25
+warming up replay buffer: 26
+warming up replay buffer: 27
+warming up replay buffer: 28
+warming up replay buffer: 29
+warming up replay buffer: 30
+warming up replay buffer: 31
+warming up replay buffer: 32
+warming up replay buffer: 33
+warming up replay buffer: 33
+warming up replay buffer: 33
+warming up replay buffer: 33
+warming up replay buffer: 34
+warming up replay buffer: 36
+warming up replay buffer: 37
+warming up replay buffer: 38
+warming up replay buffer: 39
+warming up replay buffer: 39
+warming up replay buffer: 39
+warming up replay buffer: 40
+warming up replay buffer: 40
+warming up replay buffer: 40
+warming up replay buffer: 42
+warming up replay buffer: 42
+warming up replay buffer: 44
+warming up replay buffer: 44
+warming up replay buffer: 44
+warming up replay buffer: 45
+warming up replay buffer: 47
+warming up replay buffer: 48
+warming up replay buffer: 49
+warming up replay buffer: 49
+warming up replay buffer: 51
+warming up replay buffer: 54
+warming up replay buffer: 54
+warming up replay buffer: 54
+warming up replay buffer: 56
+warming up replay buffer: 57
+warming up replay buffer: 60
+warming up replay buffer: 62
+warming up replay buffer: 63
+warming up replay buffer: 64
+warming up replay buffer: 66
+warming up replay buffer: 66
+warming up replay buffer: 146
+warming up replay buffer: 187
+warming up replay buffer: 190
+warming up replay buffer: 342
+warming up replay buffer: 978
+warming up replay buffer: 1183
+warming up replay buffer: 1293
+warming up replay buffer: 1452
+warming up replay buffer: 1687
+warming up replay buffer: 1808
+warming up replay buffer: 2048
+warming up replay buffer: 2168
+warming up replay buffer: 2288
+warming up replay buffer: 2487
+warming up replay buffer: 2488
+warming up replay buffer: 2610
+warming up replay buffer: 2650
+warming up replay buffer: 2690
+warming up replay buffer: 2730
+warming up replay buffer: 2851
+warming up replay buffer: 2854
+warming up replay buffer: 2898
+warming up replay buffer: 2937
+warming up replay buffer: 3016
+warming up replay buffer: 3057
+warming up replay buffer: 3057
+warming up replay buffer: 3057
+warming up replay buffer: 3085
+warming up replay buffer: 3087
+warming up replay buffer: 3089
+warming up replay buffer: 3130
+warming up replay buffer: 3131
+warming up replay buffer: 3172
+warming up replay buffer: 3173
+warming up replay buffer: 3173
+warming up replay buffer: 3173
+warming up replay buffer: 3215
+warming up replay buffer: 3244
+warming up replay buffer: 3245
+warming up replay buffer: 3245
+warming up replay buffer: 3245
+warming up replay buffer: 3246
+warming up replay buffer: 3247
+warming up replay buffer: 3287
+warming up replay buffer: 3288
+warming up replay buffer: 3291
+warming up replay buffer: 3293
+warming up replay buffer: 3295
+warming up replay buffer: 3296
+warming up replay buffer: 3297
+warming up replay buffer: 3299
+warming up replay buffer: 3301
+warming up replay buffer: 3302
+warming up replay buffer: 3302
+warming up replay buffer: 3304
+warming up replay buffer: 3344
+warming up replay buffer: 3345
+warming up replay buffer: 3349
+warming up replay buffer: 3389
+warming up replay buffer: 3390
+warming up replay buffer: 3390
+warming up replay buffer: 3391
+warming up replay buffer: 3429
+warming up replay buffer: 3430
+warming up replay buffer: 3432
+warming up replay buffer: 3433
+warming up replay buffer: 3438
+warming up replay buffer: 3439
+warming up replay buffer: 3441
+warming up replay buffer: 3442
+warming up replay buffer: 3442
+warming up replay buffer: 3483
+warming up replay buffer: 3487
+warming up replay buffer: 3492
+warming up replay buffer: 3534
+warming up replay buffer: 3534
+warming up replay buffer: 3610
+warming up replay buffer: 3642
+warming up replay buffer: 3645
+warming up replay buffer: 3645
+warming up replay buffer: 3724
+warming up replay buffer: 3727
+warming up replay buffer: 3767
+warming up replay buffer: 3808
+warming up replay buffer: 3810
+warming up replay buffer: 3812
+warming up replay buffer: 3940
+warming up replay buffer: 4012
+warming up replay buffer: 4094
+warming up replay buffer: 4135
+warming up replay buffer: 4179
+warming up replay buffer: 4299
+warming up replay buffer: 4530
+warming up replay buffer: 4689
+warming up replay buffer: 4850
+beginning of epoch:  0
+available: 335.325 GB, used: 32.261 GB, free: 320.670 GB
+EPOCH: 0
+Speed: train: 259.9, act: 13586.3, buffer_add: 244.7, buffer_size: 15068
+Total Time: 0H 02M 03S, 123s
+Total Sample: train: 16K, act: 836.52K
+[0] Time spent = 123.15 s
+0:grad_norm  [ 500]: avg:   0.9707, min:   0.1273[  22], max:  10.6476[   2]
+0:loss       [ 500]: avg:   0.3321, min:   0.1834[  96], max:   1.4750[ 475]
+model saved to model0.pthm
+epoch 0, eval score: 0.7370, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  1
+available: 328.000 GB, used: 39.585 GB, free: 313.271 GB
+EPOCH: 1
+Speed: train: 100.8, act: 5118.8, buffer_add: 116.5, buffer_size: 33559
+Total Time: 0H 07M 20S, 440s
+Total Sample: train: 32K, act: 1.649M
+[1] Time spent = 317.32 s
+1:grad_norm  [ 500]: avg:   1.3662, min:   0.2546[  44], max:   8.8120[ 155]
+1:loss       [ 500]: avg:   0.6210, min:   0.2040[  20], max:   2.0553[ 258]
+model saved to model0.pthm
+epoch 1, eval score: 1.2970, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  2
+available: 318.012 GB, used: 49.582 GB, free: 303.354 GB
+EPOCH: 2
+Speed: train: 134.9, act: 4571.5, buffer_add: 118.2, buffer_size: 40067
+Total Time: 0H 11M 17S, 677s
+Total Sample: train: 48K, act: 2.191M
+[2] Time spent = 237.18 s
+2:grad_norm  [ 500]: avg:   2.1790, min:   0.4452[ 167], max:   6.8691[ 472]
+2:loss       [ 500]: avg:   0.9323, min:   0.2443[ 447], max:   2.3330[ 422]
+model saved to model0.pthm
+epoch 2, eval score: 1.2510, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  3
+available: 309.451 GB, used: 58.135 GB, free: 295.038 GB
+EPOCH: 3
+Speed: train: 70.1, act: 5496.2, buffer_add: 155.3, buffer_size: 40037
+Total Time: 0H 18M 53S, 1133s
+Total Sample: train: 64K, act: 3.444M
+[3] Time spent = 456.17 s
+3:grad_norm  [ 500]: avg:   4.0902, min:   0.7327[  29], max:  15.7930[ 481]
+3:loss       [ 500]: avg:   1.5047, min:   0.4110[  83], max:   3.1433[ 482]
+model saved to model0.pthm
+epoch 3, eval score: 0.6040, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  4
+available: 301.790 GB, used: 65.796 GB, free: 287.404 GB
+EPOCH: 4
+Speed: train: 61.2, act: 5468.0, buffer_add: 150.9, buffer_size: 40044
+Total Time: 0H 27M 36S, 1656s
+Total Sample: train: 80K, act: 4.873M
+[4] Time spent = 523.13 s
+4:grad_norm  [ 500]: avg:   5.0127, min:   1.3364[ 371], max:  16.5352[  92]
+4:loss       [ 500]: avg:   2.2032, min:   1.0764[ 306], max:   4.3284[ 457]
+model saved to model0.pthm
+epoch 4, eval score: 1.3420, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  5
+available: 302.101 GB, used: 65.157 GB, free: 284.310 GB
+EPOCH: 5
+Speed: train: 40.7, act: 5761.1, buffer_add: 117.5, buffer_size: 40034
+Total Time: 0H 40M 42S, 2442s
+Total Sample: train: 96K, act: 7.137M
+[5] Time spent = 786.10 s
+5:grad_norm  [ 500]: avg:   5.6405, min:   1.2092[ 232], max:  22.5052[ 345]
+5:loss       [ 500]: avg:   2.5375, min:   1.4662[  57], max:   4.4960[   8]
+model saved to model0.pthm
+epoch 5, eval score: 2.4220, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  6
+available: 301.603 GB, used: 65.999 GB, free: 288.382 GB
+EPOCH: 6
+Speed: train: 37.9, act: 5801.0, buffer_add: 103.2, buffer_size: 40028
+Total Time: 0H 54M 46S, 3286s
+Total Sample: train: 112K, act: 9.586M
+[6] Time spent = 844.41 s
+6:grad_norm  [ 500]: avg:   5.1776, min:   1.3745[ 209], max:  15.1983[ 248]
+6:loss       [ 500]: avg:   2.2747, min:   1.4247[ 231], max:   3.5013[ 131]
+model saved to model0.pthm
+epoch 6, eval score: 2.8860, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  7
+available: 300.835 GB, used: 66.769 GB, free: 288.892 GB
+EPOCH: 7
+Speed: train: 34.6, act: 5845.1, buffer_add: 89.2, buffer_size: 40042
+Total Time: 1H 10M 11S, 4211s
+Total Sample: train: 128K, act: 12.289M
+[7] Time spent = 924.70 s
+7:grad_norm  [ 500]: avg:   7.4584, min:   1.8124[  31], max:  22.1751[ 412]
+7:loss       [ 500]: avg:   2.2214, min:   1.4738[ 492], max:   3.2824[ 247]
+model saved to model0.pthm
+epoch 7, eval score: 3.7310, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  8
+available: 301.585 GB, used: 65.621 GB, free: 283.763 GB
+EPOCH: 8
+Speed: train: 33.3, act: 5940.1, buffer_add: 84.1, buffer_size: 40037
+Total Time: 1H 26M 11S, 5171s
+Total Sample: train: 144K, act: 15.141M
+[8] Time spent = 960.38 s
+8:grad_norm  [ 500]: avg:   7.7757, min:   2.6213[ 313], max:  24.6671[ 292]
+8:loss       [ 500]: avg:   2.2644, min:   1.2473[ 479], max:   3.3168[  83]
+model saved to model0.pthm
+epoch 8, eval score: 4.2300, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  9
+available: 303.144 GB, used: 64.456 GB, free: 286.441 GB
+EPOCH: 9
+Speed: train: 34.2, act: 5948.9, buffer_add: 88.7, buffer_size: 40028
+Total Time: 1H 41M 47S, 6107s
+Total Sample: train: 160K, act: 17.925M
+[9] Time spent = 935.72 s
+9:grad_norm  [ 500]: avg:   8.3690, min:   3.1108[  98], max:  26.1931[ 341]
+9:loss       [ 500]: avg:   2.3222, min:   1.2776[ 146], max:   3.6075[ 389]
+model saved to model0.pthm
+epoch 9, eval score: 4.9880, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  10
+available: 302.406 GB, used: 65.197 GB, free: 287.097 GB
+EPOCH: 10
+Speed: train: 41.0, act: 5936.2, buffer_add: 84.1, buffer_size: 40032
+Total Time: 1H 54M 47S, 6887s
+Total Sample: train: 176K, act: 20.239M
+[10] Time spent = 779.83 s
+10:grad_norm [ 500]: avg:  14.1245, min:   4.4481[  65], max:  49.1647[ 135]
+10:loss      [ 500]: avg:   3.0202, min:   1.8396[ 247], max:   4.9351[ 135]
+model saved to model4.pthm
+epoch 10, eval score: 5.5160, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  11
+available: 302.272 GB, used: 65.330 GB, free: 289.010 GB
+EPOCH: 11
+Speed: train: 39.2, act: 5980.0, buffer_add: 83.6, buffer_size: 40044
+Total Time: 2H 08M 24S, 7704s
+Total Sample: train: 192K, act: 22.683M
+[11] Time spent = 817.20 s
+11:grad_norm [ 500]: avg:  14.1323, min:   5.8388[ 131], max:  35.7005[ 184]
+11:loss      [ 500]: avg:   3.0493, min:   2.0005[  80], max:   4.4062[ 193]
+model saved to model1.pthm
+epoch 11, eval score: 5.7780, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  12
+available: 298.652 GB, used: 68.949 GB, free: 287.536 GB
+EPOCH: 12
+Speed: train: 55.9, act: 5811.6, buffer_add: 79.6, buffer_size: 40053
+Total Time: 2H 17M 56S, 8276s
+Total Sample: train: 208K, act: 24.346M
+[12] Time spent = 572.29 s
+12:grad_norm [ 500]: avg:  13.0578, min:   4.5195[ 218], max:  51.4486[ 464]
+12:loss      [ 500]: avg:   2.7821, min:   1.8302[ 241], max:   4.1518[  59]
+model saved to model3.pthm
+epoch 12, eval score: 6.5240, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  13
+available: 302.899 GB, used: 64.714 GB, free: 289.358 GB
+EPOCH: 13
+Speed: train: 58.1, act: 5784.0, buffer_add: 80.8, buffer_size: 40012
+Total Time: 2H 27M 07S, 8827s
+Total Sample: train: 224K, act: 25.939M
+[13] Time spent = 550.99 s
+13:grad_norm [ 500]: avg:  13.9207, min:   5.8924[ 214], max:  33.0584[ 184]
+13:loss      [ 500]: avg:   2.7463, min:   1.7785[  44], max:   3.9073[  48]
+model saved to model2.pthm
+epoch 13, eval score: 6.2780, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  14
+available: 302.618 GB, used: 64.996 GB, free: 290.537 GB
+EPOCH: 14
+Speed: train: 30.6, act: 5848.2, buffer_add: 81.9, buffer_size: 40030
+Total Time: 2H 44M 35S, 9875s
+Total Sample: train: 240K, act: 29.002M
+[14] Time spent = 1047.36 s
+14:grad_norm [ 500]: avg:  13.4211, min:   5.7758[ 355], max:  36.9396[ 451]
+14:loss      [ 500]: avg:   2.7898, min:   1.8634[ 187], max:   3.6781[ 272]
+model saved to model5.pthm
+epoch 14, eval score: 6.5300, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  15
+available: 300.428 GB, used: 67.179 GB, free: 294.759 GB
+EPOCH: 15
+Speed: train: 35.3, act: 5886.3, buffer_add: 81.5, buffer_size: 40032
+Total Time: 2H 59M 42S, 10782s
+Total Sample: train: 256K, act: 31.673M
+[15] Time spent = 907.63 s
+15:grad_norm [ 500]: avg:  17.7810, min:   6.7389[ 370], max:  53.9456[   7]
+15:loss      [ 500]: avg:   3.6886, min:   2.5358[  91], max:   5.1050[  37]
+model saved to model6.pthm
+epoch 15, eval score: 7.2050, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  16
+available: 299.811 GB, used: 67.504 GB, free: 255.795 GB
+EPOCH: 16
+Speed: train: 23.6, act: 5916.4, buffer_add: 81.8, buffer_size: 40044
+Total Time: 3H 22M 20S, 12140s
+Total Sample: train: 272K, act: 35.69M
+[16] Time spent = 1358.10 s
+16:grad_norm [ 500]: avg:  16.1658, min:   7.5197[ 487], max:  54.2370[  47]
+16:loss      [ 500]: avg:   3.7498, min:   2.8536[ 409], max:   4.9178[ 462]
+model saved to model7.pthm
+epoch 16, eval score: 7.7270, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  17
+available: 297.463 GB, used: 70.098 GB, free: 278.994 GB
+EPOCH: 17
+Speed: train: 36.2, act: 5974.3, buffer_add: 82.3, buffer_size: 40018
+Total Time: 3H 37M 05S, 13025s
+Total Sample: train: 288K, act: 38.332M
+[17] Time spent = 884.50 s
+17:grad_norm [ 500]: avg:  15.2479, min:   5.6819[ 422], max:  40.2106[ 174]
+17:loss      [ 500]: avg:   3.6905, min:   2.6249[ 422], max:   4.7375[ 439]
+model saved to model8.pthm
+epoch 17, eval score: 8.2450, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  18
+available: 305.478 GB, used: 62.094 GB, free: 287.131 GB
+EPOCH: 18
+Speed: train: 37.0, act: 6007.8, buffer_add: 83.0, buffer_size: 40027
+Total Time: 3H 51M 29S, 13889s
+Total Sample: train: 304K, act: 40.928M
+[18] Time spent = 864.23 s
+18:grad_norm [ 500]: avg:  13.7520, min:   5.2052[ 117], max:  34.3937[ 112]
+18:loss      [ 500]: avg:   3.6615, min:   2.5518[ 308], max:   4.7740[ 141]
+model saved to model9.pthm
+epoch 18, eval score: 8.1000, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  19
+available: 307.411 GB, used: 60.174 GB, free: 289.688 GB
+EPOCH: 19
+Speed: train: 23.9, act: 6051.6, buffer_add: 85.6, buffer_size: 40004
+Total Time: 4H 13M 50S, 15230s
+Total Sample: train: 320K, act: 44.987M
+[19] Time spent = 1341.35 s
+19:grad_norm [ 500]: avg:  13.5409, min:   5.3473[ 466], max:  49.3598[  24]
+19:loss      [ 500]: avg:   3.7576, min:   2.7964[  93], max:   5.2631[ 388]
+model saved to model0.pthm
+epoch 19, eval score: 8.1430, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  20
+available: 307.115 GB, used: 60.474 GB, free: 291.848 GB
+EPOCH: 20
+Speed: train: 28.5, act: 6052.9, buffer_add: 85.9, buffer_size: 40003
+Total Time: 4H 32M 33S, 16353s
+Total Sample: train: 336K, act: 48.385M
+[20] Time spent = 1122.92 s
+20:grad_norm [ 500]: avg:  15.5710, min:   6.1349[  99], max:  59.2868[   0]
+20:loss      [ 500]: avg:   4.7454, min:   3.3734[ 246], max:   6.3952[ 483]
+model saved to model4.pthm
+epoch 20, eval score: 9.8180, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  21
+available: 304.885 GB, used: 62.713 GB, free: 296.505 GB
+EPOCH: 21
+Speed: train: 27.6, act: 6021.3, buffer_add: 84.1, buffer_size: 40030
+Total Time: 4H 51M 53S, 17513s
+Total Sample: train: 352K, act: 51.878M
+[21] Time spent = 1160.08 s
+21:grad_norm [ 500]: avg:  14.1696, min:   6.3253[ 300], max:  51.8773[ 381]
+21:loss      [ 500]: avg:   5.1954, min:   3.6145[  93], max:   7.5260[ 167]
+model saved to model1.pthm
+epoch 21, eval score: 9.5130, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  22
+available: 296.688 GB, used: 70.915 GB, free: 287.244 GB
+EPOCH: 22
+Speed: train: 29.2, act: 6024.5, buffer_add: 87.2, buffer_size: 39977
+Total Time: 5H 10M 11S, 18611s
+Total Sample: train: 368K, act: 55.183M
+[22] Time spent = 1097.12 s
+22:grad_norm [ 500]: avg:  14.2256, min:   6.2975[  14], max:  44.4544[ 386]
+22:loss      [ 500]: avg:   5.8700, min:   4.0960[   4], max:   8.0357[ 420]
+model saved to model2.pthm
+epoch 22, eval score: 10.1980, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  23
+available: 296.296 GB, used: 71.308 GB, free: 287.204 GB
+EPOCH: 23
+Speed: train: 82.9, act: 5917.1, buffer_add: 85.0, buffer_size: 39984
+Total Time: 5H 16M 37S, 18997s
+Total Sample: train: 384K, act: 56.325M
+[23] Time spent = 386.06 s
+23:grad_norm [ 500]: avg:  15.5729, min:   7.8719[ 477], max:  33.4457[ 226]
+23:loss      [ 500]: avg:   7.0903, min:   5.0456[ 454], max:  11.0865[ 434]
+model saved to model3.pthm
+epoch 23, eval score: 10.5740, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  24
+available: 296.274 GB, used: 71.330 GB, free: 287.121 GB
+EPOCH: 24
+Speed: train: 28.3, act: 6030.0, buffer_add: 88.4, buffer_size: 40015
+Total Time: 5H 35M 29S, 20129s
+Total Sample: train: 400K, act: 59.739M
+[24] Time spent = 1132.30 s
+24:grad_norm [ 500]: avg:  12.9325, min:   6.6231[ 103], max:  29.8738[ 181]
+24:loss      [ 500]: avg:   8.3700, min:   5.1516[   2], max:  15.1560[ 278]
+model saved to model5.pthm
+epoch 24, eval score: 9.2700, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  25
+available: 303.195 GB, used: 64.422 GB, free: 289.374 GB
+EPOCH: 25
+Speed: train: 21.1, act: 6030.3, buffer_add: 92.5, buffer_size: 40003
+Total Time: 6H 00M 47S, 21647s
+Total Sample: train: 416K, act: 64.317M
+[25] Time spent = 1518.54 s
+25:grad_norm [ 500]: avg:  19.0100, min:   4.9471[  62], max:  65.1539[   1]
+25:loss      [ 500]: avg:   9.9209, min:   6.4523[ 179], max:  19.8371[ 391]
+model saved to model6.pthm
+epoch 25, eval score: 11.3040, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  26
+available: 302.632 GB, used: 64.984 GB, free: 288.836 GB
+EPOCH: 26
+Speed: train: 35.0, act: 6022.1, buffer_add: 89.7, buffer_size: 40005
+Total Time: 6H 16M 03S, 22563s
+Total Sample: train: 432K, act: 67.073M
+[26] Time spent = 915.11 s
+26:grad_norm [ 500]: avg:  17.7463, min:   6.8300[ 113], max:  45.5400[  92]
+26:loss      [ 500]: avg:   7.9525, min:   4.9187[ 455], max:  12.2772[ 328]
+model saved to model7.pthm
+epoch 26, eval score: 12.8470, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  27
+available: 302.289 GB, used: 65.327 GB, free: 288.491 GB
+EPOCH: 27
+Speed: train: 83.7, act: 5922.1, buffer_add: 87.4, buffer_size: 40025
+Total Time: 6H 22M 25S, 22945s
+Total Sample: train: 448K, act: 68.205M
+[27] Time spent = 382.35 s
+27:grad_norm [ 500]: avg:  14.7174, min:   6.5844[ 325], max:  30.0362[ 147]
+27:loss      [ 500]: avg:   7.1953, min:   4.3923[ 459], max:   9.6469[  17]
+model saved to model9.pthm
+epoch 27, eval score: 12.9740, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  28
+available: 302.177 GB, used: 65.439 GB, free: 288.363 GB
+EPOCH: 28
+Speed: train: 37.7, act: 6025.5, buffer_add: 88.7, buffer_size: 40022
+Total Time: 6H 36M 33S, 23793s
+Total Sample: train: 464K, act: 70.76M
+[28] Time spent = 848.20 s
+28:grad_norm [ 500]: avg:  14.0848, min:   6.3715[ 448], max:  34.1225[ 352]
+28:loss      [ 500]: avg:   6.5673, min:   4.7871[ 498], max:   9.4560[ 358]
+model saved to model0.pthm
+epoch 28, eval score: 12.8990, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  29
+available: 301.910 GB, used: 65.706 GB, free: 288.107 GB
+EPOCH: 29
+Speed: train: 37.3, act: 6022.2, buffer_add: 90.1, buffer_size: 40041
+Total Time: 6H 50M 50S, 24650s
+Total Sample: train: 480K, act: 73.341M
+[29] Time spent = 856.91 s
+29:grad_norm [ 500]: avg:  12.6949, min:   5.3082[ 280], max:  36.0278[ 261]
+29:loss      [ 500]: avg:   6.3366, min:   4.7395[ 371], max:   8.9482[ 188]
+model saved to model8.pthm
+epoch 29, eval score: 13.2370, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  30
+available: 301.654 GB, used: 65.961 GB, free: 287.825 GB
+EPOCH: 30
+Speed: train: 33.5, act: 6032.0, buffer_add: 90.8, buffer_size: 40026
+Total Time: 7H 06M 46S, 25606s
+Total Sample: train: 496K, act: 76.223M
+[30] Time spent = 955.60 s
+30:grad_norm [ 500]: avg:  17.8097, min:   7.5057[ 228], max:  77.4468[   1]
+30:loss      [ 500]: avg:   5.6834, min:   3.6484[  72], max:   7.3841[   0]
+model saved to model5.pthm
+epoch 30, eval score: 13.5520, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  31
+available: 303.944 GB, used: 63.685 GB, free: 290.389 GB
+EPOCH: 31
+Speed: train: 28.2, act: 6049.3, buffer_add: 89.9, buffer_size: 40031
+Total Time: 7H 25M 38S, 26738s
+Total Sample: train: 512K, act: 79.649M
+[31] Time spent = 1132.84 s
+31:grad_norm [ 500]: avg:  17.1486, min:   6.9029[ 308], max:  46.8767[ 250]
+31:loss      [ 500]: avg:   5.7803, min:   4.1916[ 285], max:   7.2835[ 112]
+model saved to model1.pthm
+epoch 31, eval score: 13.4550, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  32
+available: 303.616 GB, used: 64.013 GB, free: 290.056 GB
+EPOCH: 32
+Speed: train: 80.4, act: 5943.2, buffer_add: 87.6, buffer_size: 40027
+Total Time: 7H 32M 17S, 27137s
+Total Sample: train: 528K, act: 80.832M
+[32] Time spent = 398.08 s
+32:grad_norm [ 500]: avg:  16.8915, min:   6.1172[ 288], max:  42.5328[ 114]
+32:loss      [ 500]: avg:   5.6823, min:   4.3363[ 268], max:   7.7763[ 454]
+model saved to model4.pthm
+epoch 32, eval score: 12.8770, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  33
+available: 303.537 GB, used: 64.092 GB, free: 289.941 GB
+EPOCH: 33
+Speed: train: 38.8, act: 6054.8, buffer_add: 88.6, buffer_size: 40036
+Total Time: 7H 46M 02S, 27962s
+Total Sample: train: 544K, act: 83.331M
+[33] Time spent = 825.44 s
+33:grad_norm [ 500]: avg:  16.5580, min:   6.6151[ 385], max:  34.4003[ 116]
+33:loss      [ 500]: avg:   5.9297, min:   4.4557[  24], max:   7.7985[ 251]
+model saved to model2.pthm
+epoch 33, eval score: 13.3920, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  34
+available: 301.115 GB, used: 66.501 GB, free: 289.940 GB
+EPOCH: 34
+Speed: train: 29.7, act: 6007.7, buffer_add: 89.1, buffer_size: 40012
+Total Time: 8H 03M 59S, 29039s
+Total Sample: train: 560K, act: 86.566M
+[34] Time spent = 1076.93 s
+34:grad_norm [ 500]: avg:  16.2485, min:   6.8352[ 422], max:  40.9004[  97]
+34:loss      [ 500]: avg:   5.9222, min:   4.2468[ 373], max:   7.4949[ 171]
+model saved to model3.pthm
+epoch 34, eval score: 14.2660, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  35
+available: 298.905 GB, used: 68.701 GB, free: 291.598 GB
+EPOCH: 35
+Speed: train: 52.2, act: 5951.7, buffer_add: 88.5, buffer_size: 40036
+Total Time: 8H 14M 12S, 29652s
+Total Sample: train: 576K, act: 88.39M
+[35] Time spent = 613.06 s
+35:grad_norm [ 500]: avg:  18.0579, min:   7.2828[ 290], max:  94.0687[   1]
+35:loss      [ 500]: avg:   5.9745, min:   4.4884[ 366], max:   8.6652[   1]
+model saved to model6.pthm
+epoch 35, eval score: 14.0570, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  36
+available: 298.776 GB, used: 68.828 GB, free: 291.448 GB
+EPOCH: 36
+Speed: train: 28.8, act: 6000.1, buffer_add: 89.0, buffer_size: 40016
+Total Time: 8H 32M 43S, 30763s
+Total Sample: train: 592K, act: 91.724M
+[36] Time spent = 1111.30 s
+36:grad_norm [ 500]: avg:  16.8302, min:   7.2026[  87], max:  42.1067[ 343]
+36:loss      [ 500]: avg:   6.1870, min:   4.5930[  96], max:   7.9794[ 345]
+model saved to model7.pthm
+epoch 36, eval score: 13.9000, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  37
+available: 298.551 GB, used: 69.054 GB, free: 291.233 GB
+EPOCH: 37
+Speed: train: 37.4, act: 5985.1, buffer_add: 88.5, buffer_size: 40014
+Total Time: 8H 46M 59S, 31619s
+Total Sample: train: 608K, act: 94.287M
+[37] Time spent = 856.24 s
+37:grad_norm [ 500]: avg:  15.9474, min:   6.9173[   3], max:  46.1579[  25]
+37:loss      [ 500]: avg:   6.2548, min:   4.4930[ 468], max:   7.5636[  48]
+model saved to model4.pthm
+epoch 37, eval score: 13.8770, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  38
+available: 298.351 GB, used: 69.256 GB, free: 291.046 GB
+EPOCH: 38
+Speed: train: 49.9, act: 5956.7, buffer_add: 89.1, buffer_size: 40026
+Total Time: 8H 57M 40S, 32260s
+Total Sample: train: 624K, act: 96.196M
+[38] Time spent = 640.96 s
+38:grad_norm [ 500]: avg:  15.6796, min:   5.5888[ 452], max:  63.3672[ 119]
+38:loss      [ 500]: avg:   6.2418, min:   4.6042[  79], max:   8.1970[ 366]
+model saved to model0.pthm
+epoch 38, eval score: 14.3160, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  39
+available: 298.206 GB, used: 69.400 GB, free: 290.881 GB
+EPOCH: 39
+Speed: train: 35.5, act: 5991.2, buffer_add: 88.3, buffer_size: 39992
+Total Time: 9H 12M 43S, 33163s
+Total Sample: train: 640K, act: 98.898M
+[39] Time spent = 902.06 s
+39:grad_norm [ 500]: avg:  14.5163, min:   6.2611[ 392], max:  43.5673[ 455]
+39:loss      [ 500]: avg:   6.2648, min:   4.7908[ 460], max:   7.9287[  82]
+model saved to model9.pthm
+epoch 39, eval score: 14.1520, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  40
+available: 298.068 GB, used: 69.539 GB, free: 290.704 GB
+EPOCH: 40
+Speed: train: 34.1, act: 5989.2, buffer_add: 89.4, buffer_size: 40009
+Total Time: 9H 28M 21S, 34101s
+Total Sample: train: 656K, act: 101.709M
+[40] Time spent = 938.90 s
+40:grad_norm [ 500]: avg:  18.8438, min:   7.7478[ 363], max:  82.7451[   0]
+40:loss      [ 500]: avg:   6.0239, min:   4.4472[ 100], max:   9.5177[   0]
+model saved to model8.pthm
+epoch 40, eval score: 15.0520, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  41
+available: 297.933 GB, used: 69.672 GB, free: 290.599 GB
+EPOCH: 41
+Speed: train: 74.7, act: 5906.6, buffer_add: 86.7, buffer_size: 39997
+Total Time: 9H 35M 30S, 34530s
+Total Sample: train: 672K, act: 102.974M
+[41] Time spent = 428.17 s
+41:grad_norm [ 500]: avg:  17.5057, min:   7.3371[ 136], max:  52.7420[  10]
+41:loss      [ 500]: avg:   6.4097, min:   4.9175[ 426], max:   8.2445[ 217]
+model saved to model2.pthm
+epoch 41, eval score: 14.6200, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  42
+available: 297.879 GB, used: 69.725 GB, free: 290.509 GB
+EPOCH: 42
+Speed: train: 51.6, act: 5960.5, buffer_add: 87.9, buffer_size: 40013
+Total Time: 9H 45M 50S, 35150s
+Total Sample: train: 688K, act: 104.823M
+[42] Time spent = 620.54 s
+42:grad_norm [ 500]: avg:  17.0212, min:   6.7325[ 345], max:  45.1376[ 407]
+42:loss      [ 500]: avg:   6.3516, min:   4.9561[ 351], max:   7.7813[ 214]
+model saved to model1.pthm
+epoch 42, eval score: 14.9660, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  43
+available: 297.776 GB, used: 69.830 GB, free: 290.385 GB
+EPOCH: 43
+Speed: train: 28.6, act: 6004.4, buffer_add: 88.5, buffer_size: 40019
+Total Time: 10H 04M 31S, 36271s
+Total Sample: train: 704K, act: 108.187M
+[43] Time spent = 1120.44 s
+43:grad_norm [ 500]: avg:  16.8897, min:   7.9128[  51], max:  42.1943[ 436]
+43:loss      [ 500]: avg:   6.2807, min:   4.5706[ 309], max:   7.8183[ 380]
+model saved to model5.pthm
+epoch 43, eval score: 15.0920, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  44
+available: 297.566 GB, used: 70.039 GB, free: 290.221 GB
+EPOCH: 44
+Speed: train: 30.2, act: 6001.4, buffer_add: 88.8, buffer_size: 40133
+Total Time: 10H 22M 12S, 37332s
+Total Sample: train: 720K, act: 111.371M
+[44] Time spent = 1061.20 s
+44:grad_norm [ 500]: avg:  17.4514, min:   7.5991[ 232], max:  48.5046[ 298]
+44:loss      [ 500]: avg:   6.1957, min:   4.5082[  35], max:   7.7874[ 305]
+model saved to model4.pthm
+epoch 44, eval score: 14.3080, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  45
+available: 297.399 GB, used: 70.205 GB, free: 290.049 GB
+EPOCH: 45
+Speed: train: 47.3, act: 5964.1, buffer_add: 89.3, buffer_size: 40036
+Total Time: 10H 33M 28S, 38008s
+Total Sample: train: 736K, act: 113.387M
+[45] Time spent = 675.84 s
+45:grad_norm [ 500]: avg:  20.0610, min:   8.0693[ 398], max: 111.0740[   0]
+45:loss      [ 500]: avg:   6.3737, min:   4.4099[ 499], max:  10.2789[   0]
+model saved to model7.pthm
+epoch 45, eval score: 15.3310, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  46
+available: 297.323 GB, used: 70.281 GB, free: 289.970 GB
+EPOCH: 46
+Speed: train: 53.2, act: 5954.6, buffer_add: 88.6, buffer_size: 40040
+Total Time: 10H 43M 29S, 38609s
+Total Sample: train: 752K, act: 115.178M
+[46] Time spent = 601.79 s
+46:grad_norm [ 500]: avg:  16.5309, min:   7.5868[ 409], max:  49.7686[  37]
+46:loss      [ 500]: avg:   6.1680, min:   4.7419[  38], max:   8.0803[ 495]
+model saved to model6.pthm
+epoch 46, eval score: 15.6120, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  47
+available: 297.204 GB, used: 70.401 GB, free: 289.830 GB
+EPOCH: 47
+Speed: train: 76.0, act: 5906.4, buffer_add: 87.6, buffer_size: 40007
+Total Time: 10H 50M 30S, 39030s
+Total Sample: train: 768K, act: 116.422M
+[47] Time spent = 420.93 s
+47:grad_norm [ 500]: avg:  17.0452, min:   7.1249[ 379], max:  66.4639[ 216]
+47:loss      [ 500]: avg:   6.1301, min:   4.5002[  41], max:   7.7468[ 163]
+model saved to model9.pthm
+epoch 47, eval score: 16.1860, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  48
+available: 297.163 GB, used: 70.442 GB, free: 289.752 GB
+EPOCH: 48
+Speed: train: 37.7, act: 5983.6, buffer_add: 89.2, buffer_size: 40041
+Total Time: 11H 04M 40S, 39880s
+Total Sample: train: 784K, act: 118.963M
+[48] Time spent = 849.35 s
+48:grad_norm [ 500]: avg:  16.5152, min:   7.7990[ 416], max: 103.4599[ 448]
+48:loss      [ 500]: avg:   6.2027, min:   4.8168[  34], max:   7.5670[ 482]
+model saved to model3.pthm
+epoch 48, eval score: 15.9550, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  49
+available: 296.986 GB, used: 70.619 GB, free: 289.554 GB
+EPOCH: 49
+Speed: train: 38.6, act: 5982.0, buffer_add: 90.1, buffer_size: 40015
+Total Time: 11H 18M 29S, 40709s
+Total Sample: train: 800K, act: 121.443M
+[49] Time spent = 829.41 s
+49:grad_norm [ 500]: avg:  16.0126, min:   7.8103[ 449], max:  63.3177[ 210]
+49:loss      [ 500]: avg:   6.4556, min:   4.8646[ 267], max:   8.9360[ 453]
+model saved to model4.pthm
+epoch 49, eval score: 16.2500, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  50
+available: 296.881 GB, used: 70.724 GB, free: 289.531 GB
+EPOCH: 50
+Speed: train: 49.3, act: 5956.4, buffer_add: 89.6, buffer_size: 40049
+Total Time: 11H 29M 18S, 41358s
+Total Sample: train: 816K, act: 123.376M
+[50] Time spent = 648.78 s
+50:grad_norm [ 500]: avg:  17.3483, min:   6.1516[ 260], max: 112.7636[   0]
+50:loss      [ 500]: avg:   6.9019, min:   5.1190[  62], max:  10.7449[   0]
+model saved to model0.pthm
+epoch 50, eval score: 16.3610, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  51
+available: 296.801 GB, used: 70.803 GB, free: 289.397 GB
+EPOCH: 51
+Speed: train: 36.7, act: 5978.8, buffer_add: 90.9, buffer_size: 40014
+Total Time: 11H 43M 49S, 42229s
+Total Sample: train: 832K, act: 125.98M
+[51] Time spent = 871.19 s
+51:grad_norm [ 500]: avg:  15.1753, min:   6.8354[ 311], max:  36.6181[  48]
+51:loss      [ 500]: avg:   7.5764, min:   5.4150[ 387], max:  10.1296[ 336]
+model saved to model2.pthm
+epoch 51, eval score: 16.2180, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  52
+available: 296.686 GB, used: 70.918 GB, free: 289.277 GB
+EPOCH: 52
+Speed: train: 29.8, act: 5993.6, buffer_add: 91.1, buffer_size: 40087
+Total Time: 12H 01M 42S, 43302s
+Total Sample: train: 848K, act: 129.195M
+[52] Time spent = 1072.82 s
+52:grad_norm [ 500]: avg:  15.0836, min:   6.8798[  75], max:  41.2969[ 358]
+52:loss      [ 500]: avg:   7.7398, min:   5.5480[  32], max:  10.6712[ 172]
+model saved to model1.pthm
+epoch 52, eval score: 17.3040, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  53
+available: 296.545 GB, used: 71.060 GB, free: 289.166 GB
+EPOCH: 53
+Speed: train: 39.1, act: 5979.5, buffer_add: 90.5, buffer_size: 40026
+Total Time: 12H 15M 20S, 44120s
+Total Sample: train: 864K, act: 131.642M
+[53] Time spent = 818.35 s
+53:grad_norm [ 500]: avg:  14.4029, min:   6.4578[ 311], max:  41.2402[ 303]
+53:loss      [ 500]: avg:   7.1274, min:   5.3741[ 245], max:   9.7542[  68]
+model saved to model8.pthm
+epoch 53, eval score: 17.1640, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  54
+available: 296.443 GB, used: 71.162 GB, free: 289.057 GB
+EPOCH: 54
+Speed: train: 38.1, act: 5977.1, buffer_add: 90.8, buffer_size: 40034
+Total Time: 12H 29M 20S, 44960s
+Total Sample: train: 880K, act: 134.152M
+[54] Time spent = 840.00 s
+54:grad_norm [ 500]: avg:  13.7607, min:   6.4000[ 292], max:  50.2690[ 360]
+54:loss      [ 500]: avg:   6.9618, min:   5.0499[ 466], max:   9.4025[ 300]
+model saved to model5.pthm
+epoch 54, eval score: 16.7610, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  55
+available: 296.366 GB, used: 71.238 GB, free: 288.960 GB
+EPOCH: 55
+Speed: train: 30.2, act: 5992.0, buffer_add: 90.3, buffer_size: 39996
+Total Time: 12H 46M 58S, 46018s
+Total Sample: train: 896K, act: 137.322M
+[55] Time spent = 1058.14 s
+55:grad_norm [ 500]: avg:  18.9133, min:   6.8631[  57], max:  89.4337[   0]
+55:loss      [ 500]: avg:   6.6956, min:   4.7391[  48], max:   9.3717[   0]
+model saved to model7.pthm
+epoch 55, eval score: 17.0210, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  56
+available: 296.194 GB, used: 71.410 GB, free: 288.801 GB
+EPOCH: 56
+Speed: train: 38.7, act: 5978.8, buffer_add: 90.0, buffer_size: 40012
+Total Time: 13H 00M 45S, 46845s
+Total Sample: train: 912K, act: 139.792M
+[56] Time spent = 826.26 s
+56:grad_norm [ 500]: avg:  17.8890, min:   7.3164[ 387], max:  41.2466[ 160]
+56:loss      [ 500]: avg:   7.1243, min:   5.3620[ 488], max:   9.0376[ 255]
+model saved to model6.pthm
+epoch 56, eval score: 17.2700, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  57
+available: 296.076 GB, used: 71.529 GB, free: 288.679 GB
+EPOCH: 57
+Speed: train: 48.9, act: 5961.1, buffer_add: 89.7, buffer_size: 39994
+Total Time: 13H 11M 39S, 47499s
+Total Sample: train: 928K, act: 141.742M
+[57] Time spent = 654.17 s
+57:grad_norm [ 500]: avg:  18.1729, min:   7.8674[  54], max:  45.0315[ 309]
+57:loss      [ 500]: avg:   7.0679, min:   5.1204[ 215], max:   8.8843[ 322]
+model saved to model3.pthm
+epoch 57, eval score: 17.3760, perfect: 0.10, model saved: True
+==========
+beginning of epoch:  58
+available: 295.989 GB, used: 71.616 GB, free: 288.589 GB
+EPOCH: 58
+Speed: train: 38.4, act: 5977.7, buffer_add: 90.2, buffer_size: 40010
+Total Time: 13H 25M 32S, 48332s
+Total Sample: train: 944K, act: 144.231M
+[58] Time spent = 832.83 s
+58:grad_norm [ 500]: avg:  18.9007, min:   7.4566[ 394], max:  54.6464[ 332]
+58:loss      [ 500]: avg:   7.0137, min:   5.3850[ 207], max:   8.8287[ 340]
+model saved to model9.pthm
+epoch 58, eval score: 17.3170, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  59
+available: 295.885 GB, used: 71.721 GB, free: 288.480 GB
+EPOCH: 59
+Speed: train: 37.0, act: 5985.8, buffer_add: 90.7, buffer_size: 40018
+Total Time: 13H 39M 57S, 49197s
+Total Sample: train: 960K, act: 146.821M
+[59] Time spent = 865.41 s
+59:grad_norm [ 500]: avg:  17.1879, min:   7.1569[ 498], max:  52.4055[  20]
+59:loss      [ 500]: avg:   7.0490, min:   5.5286[ 159], max:   8.7329[ 181]
+model saved to model2.pthm
+epoch 59, eval score: 17.7290, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  60
+available: 295.779 GB, used: 71.818 GB, free: 288.368 GB
+EPOCH: 60
+Speed: train: 52.1, act: 5952.5, buffer_add: 89.9, buffer_size: 40025
+Total Time: 13H 50M 12S, 49812s
+Total Sample: train: 976K, act: 148.651M
+[60] Time spent = 614.75 s
+60:grad_norm [ 500]: avg:  20.0550, min:   8.0790[ 335], max: 121.9275[   0]
+60:loss      [ 500]: avg:   7.2439, min:   5.0594[ 339], max:  11.9905[   0]
+model saved to model4.pthm
+epoch 60, eval score: 16.6990, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  61
+available: 295.716 GB, used: 71.881 GB, free: 288.287 GB
+EPOCH: 61
+Speed: train: 28.6, act: 5999.2, buffer_add: 91.6, buffer_size: 40032
+Total Time: 14H 08M 51S, 50931s
+Total Sample: train: 992K, act: 152.009M
+[61] Time spent = 1119.56 s
+61:grad_norm [ 500]: avg:  20.0558, min:   7.7435[ 424], max:  42.4316[ 410]
+61:loss      [ 500]: avg:   7.4544, min:   5.4814[ 332], max:   9.9399[ 338]
+model saved to model0.pthm
+epoch 61, eval score: 17.9170, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  62
+available: 295.572 GB, used: 72.025 GB, free: 288.155 GB
+EPOCH: 62
+Speed: train: 38.5, act: 5976.4, buffer_add: 91.3, buffer_size: 40030
+Total Time: 14H 22M 43S, 51763s
+Total Sample: train: 1.008M, act: 154.494M
+[62] Time spent = 831.42 s
+62:grad_norm [ 500]: avg:  17.6007, min:   7.8349[ 436], max:  42.6993[ 479]
+62:loss      [ 500]: avg:   7.4791, min:   5.9242[  85], max:   9.6964[ 222]
+model saved to model4.pthm
+epoch 62, eval score: 17.3570, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  63
+available: 294.672 GB, used: 72.926 GB, free: 284.327 GB
+EPOCH: 63
+Speed: train: 81.9, act: 5885.2, buffer_add: 90.2, buffer_size: 40036
+Total Time: 14H 29M 13S, 52153s
+Total Sample: train: 1.024M, act: 155.643M
+[63] Time spent = 390.61 s
+63:grad_norm [ 500]: avg:  16.8684, min:   6.6838[ 492], max:  67.2436[ 373]
+63:loss      [ 500]: avg:   7.4215, min:   5.2243[ 492], max:  10.2977[ 178]
+model saved to model5.pthm
+epoch 63, eval score: 17.9440, perfect: 0.10, model saved: True
+==========
+beginning of epoch:  64
+available: 294.647 GB, used: 72.950 GB, free: 284.392 GB
+EPOCH: 64
+Speed: train: 37.2, act: 5981.4, buffer_add: 91.1, buffer_size: 40025
+Total Time: 14H 43M 34S, 53014s
+Total Sample: train: 1.04M, act: 158.217M
+[64] Time spent = 860.74 s
+64:grad_norm [ 500]: avg:  14.1515, min:   5.3916[ 457], max:  39.5885[ 347]
+64:loss      [ 500]: avg:   7.3151, min:   5.3830[ 287], max:  10.2838[  45]
+model saved to model7.pthm
+epoch 64, eval score: 17.6520, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  65
+available: 294.578 GB, used: 73.018 GB, free: 284.800 GB
+EPOCH: 65
+Speed: train: 52.6, act: 5925.1, buffer_add: 93.5, buffer_size: 40008
+Total Time: 14H 53M 42S, 53622s
+Total Sample: train: 1.056M, act: 160.018M
+[65] Time spent = 607.94 s
+65:grad_norm [ 500]: avg:  16.9522, min:   7.0349[ 300], max: 127.6184[   1]
+65:loss      [ 500]: avg:   7.8292, min:   5.5079[ 349], max:  10.5362[   1]
+model saved to model8.pthm
+epoch 65, eval score: 17.9590, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  66
+available: 294.519 GB, used: 73.078 GB, free: 285.310 GB
+EPOCH: 66
+Speed: train: 37.3, act: 5977.8, buffer_add: 90.9, buffer_size: 40006
+Total Time: 15H 07M 59S, 54479s
+Total Sample: train: 1.072M, act: 162.58M
+[66] Time spent = 856.91 s
+66:grad_norm [ 500]: avg:  17.1122, min:   7.3105[ 468], max:  55.0117[  98]
+66:loss      [ 500]: avg:   8.2858, min:   6.3206[ 187], max:  10.3412[ 229]
+model saved to model6.pthm
+epoch 66, eval score: 18.3320, perfect: 0.20, model saved: True
+==========
+beginning of epoch:  67
+available: 294.447 GB, used: 73.148 GB, free: 285.306 GB
+EPOCH: 67
+Speed: train: 37.2, act: 5982.2, buffer_add: 91.0, buffer_size: 40050
+Total Time: 15H 22M 18S, 55338s
+Total Sample: train: 1.088M, act: 165.149M
+[67] Time spent = 859.15 s
+67:grad_norm [ 500]: avg:  17.2687, min:   7.3979[ 280], max:  44.6493[ 285]
+67:loss      [ 500]: avg:   7.7359, min:   5.6077[ 402], max:   9.9460[  92]
+model saved to model1.pthm
+epoch 67, eval score: 18.1730, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  68
+available: 293.531 GB, used: 74.069 GB, free: 282.482 GB
+EPOCH: 68
+Speed: train: 37.1, act: 5981.5, buffer_add: 90.6, buffer_size: 40049
+Total Time: 15H 36M 41S, 56201s
+Total Sample: train: 1.104M, act: 167.729M
+[68] Time spent = 862.40 s
+68:grad_norm [ 500]: avg:  17.7858, min:   7.2743[ 324], max:  51.8082[ 307]
+68:loss      [ 500]: avg:   7.6312, min:   5.9847[ 476], max:   9.6173[ 314]
+model saved to model9.pthm
+epoch 68, eval score: 18.5220, perfect: 0.10, model saved: True
+==========
+beginning of epoch:  69
+available: 293.616 GB, used: 73.981 GB, free: 284.007 GB
+EPOCH: 69
+Speed: train: 29.4, act: 5994.9, buffer_add: 91.4, buffer_size: 40009
+Total Time: 15H 54M 50S, 57290s
+Total Sample: train: 1.12M, act: 170.995M
+[69] Time spent = 1089.81 s
+69:grad_norm [ 500]: avg:  18.1932, min:   7.5148[ 110], max:  58.6783[ 415]
+69:loss      [ 500]: avg:   7.6770, min:   5.4888[ 330], max:   9.8969[ 240]
+model saved to model4.pthm
+epoch 69, eval score: 18.6890, perfect: 0.20, model saved: True
+==========
+beginning of epoch:  70
+available: 293.712 GB, used: 73.885 GB, free: 284.378 GB
+EPOCH: 70
+Speed: train: 28.6, act: 5997.5, buffer_add: 91.6, buffer_size: 40049
+Total Time: 16H 13M 28S, 58408s
+Total Sample: train: 1.136M, act: 174.346M
+[70] Time spent = 1117.42 s
+70:grad_norm [ 500]: avg:  20.7451, min:   6.9584[ 197], max: 150.3000[   0]
+70:loss      [ 500]: avg:   7.4333, min:   5.7726[ 179], max:  13.0937[   0]
+model saved to model3.pthm
+epoch 70, eval score: 18.2530, perfect: 0.10, model saved: True
+==========
+beginning of epoch:  71
+available: 293.607 GB, used: 73.991 GB, free: 284.694 GB
+EPOCH: 71
+Speed: train: 80.1, act: 5891.4, buffer_add: 89.6, buffer_size: 39994
+Total Time: 16H 20M 07S, 58807s
+Total Sample: train: 1.152M, act: 175.522M
+[71] Time spent = 399.33 s
+71:grad_norm [ 500]: avg:  20.2743, min:   8.3765[  69], max:  43.7715[  40]
+71:loss      [ 500]: avg:   7.5089, min:   5.5375[ 469], max:   9.3604[ 236]
+model saved to model7.pthm
+epoch 71, eval score: 18.8200, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  72
+available: 293.705 GB, used: 73.891 GB, free: 285.906 GB
+EPOCH: 72
+Speed: train: 37.7, act: 5980.6, buffer_add: 91.6, buffer_size: 39996
+Total Time: 16H 34M 16S, 59656s
+Total Sample: train: 1.168M, act: 178.061M
+[72] Time spent = 848.84 s
+72:grad_norm [ 500]: avg:  19.4417, min:   7.7600[ 235], max:  45.3720[ 456]
+72:loss      [ 500]: avg:   7.3635, min:   5.7084[ 251], max:   9.1729[  92]
+model saved to model2.pthm
+epoch 72, eval score: 18.7530, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  73
+available: 293.799 GB, used: 73.797 GB, free: 286.562 GB
+EPOCH: 73
+Speed: train: 52.5, act: 5945.4, buffer_add: 90.7, buffer_size: 40001
+Total Time: 16H 44M 25S, 60265s
+Total Sample: train: 1.184M, act: 179.873M
+[73] Time spent = 609.52 s
+73:grad_norm [ 500]: avg:  17.7950, min:   7.1987[ 323], max:  44.9120[ 395]
+73:loss      [ 500]: avg:   7.2048, min:   5.3011[ 179], max:   9.6654[ 218]
+model saved to model0.pthm
+epoch 73, eval score: 18.8800, perfect: 0.20, model saved: True
+==========
+beginning of epoch:  74
+available: 293.631 GB, used: 73.965 GB, free: 286.541 GB
+EPOCH: 74
+Speed: train: 30.5, act: 5995.7, buffer_add: 91.5, buffer_size: 40015
+Total Time: 17H 01M 55S, 61315s
+Total Sample: train: 1.2M, act: 183.019M
+[74] Time spent = 1049.60 s
+74:grad_norm [ 500]: avg:  18.0217, min:   7.1268[ 149], max:  60.1285[ 417]
+74:loss      [ 500]: avg:   7.1321, min:   5.2501[ 470], max:   9.4428[ 380]
+model saved to model5.pthm
+epoch 74, eval score: 18.9630, perfect: 0.20, model saved: True
+==========
+beginning of epoch:  75
+available: 293.512 GB, used: 74.084 GB, free: 286.624 GB
+EPOCH: 75
+Speed: train: 37.8, act: 5983.5, buffer_add: 91.4, buffer_size: 40025
+Total Time: 17H 16M 01S, 62161s
+Total Sample: train: 1.216M, act: 185.551M
+[75] Time spent = 846.20 s
+75:grad_norm [ 500]: avg:  20.5867, min:   8.0529[  90], max: 130.2415[   3]
+75:loss      [ 500]: avg:   6.8582, min:   5.1740[ 460], max:  10.3729[   1]
+model saved to model8.pthm
+epoch 75, eval score: 18.8110, perfect: 0.30, model saved: True
+==========
+beginning of epoch:  76
+available: 293.446 GB, used: 74.153 GB, free: 286.501 GB
+EPOCH: 76
+Speed: train: 37.9, act: 5983.5, buffer_add: 90.9, buffer_size: 39994
+Total Time: 17H 30M 05S, 63005s
+Total Sample: train: 1.232M, act: 188.076M
+[76] Time spent = 844.14 s
+76:grad_norm [ 500]: avg:  17.8153, min:   7.1508[  82], max:  44.1541[ 211]
+76:loss      [ 500]: avg:   6.5330, min:   4.9264[ 202], max:   8.8554[ 164]
+model saved to model1.pthm
+epoch 76, eval score: 19.0230, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  77
+available: 293.373 GB, used: 74.223 GB, free: 286.373 GB
+EPOCH: 77
+Speed: train: 45.3, act: 5967.0, buffer_add: 90.7, buffer_size: 40032
+Total Time: 17H 41M 53S, 63713s
+Total Sample: train: 1.248M, act: 190.186M
+[77] Time spent = 707.18 s
+77:grad_norm [ 500]: avg:  17.9814, min:   7.1690[ 373], max:  63.5615[ 216]
+77:loss      [ 500]: avg:   6.5634, min:   4.5345[ 467], max:   8.6042[ 242]
+model saved to model3.pthm
+epoch 77, eval score: 19.0600, perfect: 0.20, model saved: True
+==========
+beginning of epoch:  78
+available: 293.338 GB, used: 74.258 GB, free: 286.283 GB
+EPOCH: 78
+Speed: train: 48.3, act: 5963.0, buffer_add: 90.5, buffer_size: 39975
+Total Time: 17H 52M 55S, 64375s
+Total Sample: train: 1.264M, act: 192.162M
+[78] Time spent = 662.87 s
+78:grad_norm [ 500]: avg:  17.1498, min:   6.9456[ 425], max:  48.4467[  59]
+78:loss      [ 500]: avg:   6.4507, min:   4.9777[ 489], max:   8.3729[  84]
+model saved to model6.pthm
+epoch 78, eval score: 18.7520, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  79
+available: 293.271 GB, used: 74.325 GB, free: 286.212 GB
+EPOCH: 79
+Speed: train: 72.4, act: 5911.6, buffer_add: 89.6, buffer_size: 40012
+Total Time: 18H 00M 17S, 64817s
+Total Sample: train: 1.28M, act: 193.468M
+[79] Time spent = 441.85 s
+79:grad_norm [ 500]: avg:  16.8237, min:   7.3189[ 484], max:  51.9758[ 300]
+79:loss      [ 500]: avg:   6.4896, min:   4.8348[ 252], max:   8.7558[ 418]
+model saved to model9.pthm
+epoch 79, eval score: 19.1080, perfect: 0.40, model saved: True
+==========
+beginning of epoch:  80
+available: 293.233 GB, used: 74.364 GB, free: 286.120 GB
+EPOCH: 80
+Speed: train: 38.2, act: 5982.1, buffer_add: 90.5, buffer_size: 39994
+Total Time: 18H 14M 16S, 65656s
+Total Sample: train: 1.296M, act: 195.977M
+[80] Time spent = 838.70 s
+80:grad_norm [ 500]: avg:  19.4533, min:   7.5223[ 398], max: 162.8264[   1]
+80:loss      [ 500]: avg:   6.4944, min:   4.6961[ 139], max:  10.7447[   1]
+model saved to model4.pthm
+epoch 80, eval score: 19.1610, perfect: 0.00, model saved: True
+==========
+beginning of epoch:  81
+available: 293.107 GB, used: 74.490 GB, free: 286.029 GB
